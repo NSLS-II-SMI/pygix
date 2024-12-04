@@ -1,0 +1,55 @@
+[project]
+name = "pygix"
+description = "A python library for reduction of 2-dimensional grazing-incidence and fibre diffraction data"
+readme = { file = "README.md", content-type = "text/markdown" }
+authors = [
+  { name = "Bluesky Project Contributors", email = "mrakitin@bnl.gov" },
+]
+maintainers = [
+  { name = "Brookhaven National Laboratory", email = "mrakitin@bnl.gov" },
+]
+
+requires-python = ">=3.9"
+
+dependencies = []
+
+classifiers = ["Development Status :: 2 - Pre-Alpha",
+               "Intended Audience :: Developers",
+               "Intended Audience :: Education",
+               "Intended Audience :: Science/Research",
+               "Natural Language :: English",
+               "Programming Language :: Cython",
+               "Programming Language :: Python :: 3",
+               "Programming Language :: Python :: Implementation :: CPython",
+               "Environment :: Console",
+               "Environment :: MacOS X",
+               "Environment :: Win32 (MS Windows)",
+               "License :: OSI Approved :: MIT License",
+               "Operating System :: Microsoft :: Windows",
+               "Operating System :: Unix",
+               "Operating System :: POSIX",
+               "Operating System :: MacOS :: MacOS X",
+               "Topic :: Documentation :: Sphinx",
+               "Topic :: Scientific/Engineering :: Physics",
+               "Topic :: Software Development :: Libraries :: Python Modules",
+               ]
+
+dynamic = ["version"]
+
+
+[project.optional-dependencies]
+
+all = [numpy
+    #scipy
+    #matplotlib
+    cython
+    fabio
+    pyFAI
+    PyYAML]
+    
+dev = [sphinx
+    sphinxcontrib-programoutput]
+
+
+[project.urls]
+Homepage = "https://github.com/NSLS-II-SMI/pygix/"
